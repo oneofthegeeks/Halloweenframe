@@ -1,0 +1,58 @@
+# Halloweenframe Configuration File
+# All settings for the Halloween scare system
+
+# GPIO Settings
+gpio:
+  pin_mode: BOARD  # Can be BOARD or BCM
+  sensor_pin: 7    # GPIO pin for PIR motion sensor
+  pull_mode: DOWN  # Pull-up/down resistor: UP or DOWN
+
+# File Paths
+paths:
+  base_dir: /home/pi/Projects/Halloween
+  media_dir: /home/pi/Projects/Halloween/ScareMedia
+  recordings_dir: /home/pi/Projects/Halloween/Recordings
+
+# Video Playback Settings
+video:
+  player: omxplayer
+  output: both        # Audio output: both, hdmi, or local
+  resolution:
+    width: 1280
+    height: 720
+  aspect_mode: fill   # fill, letterbox, or stretch
+  orientation: 180    # Rotation: 0, 90, 180, or 270
+  volume: -600        # Volume level (0 to -6000, lower is quieter)
+  show_osd: false     # Show on-screen display
+
+# Camera Recording Settings
+camera:
+  duration: 5000      # Recording duration in milliseconds
+  rotation: 180       # Camera rotation: 0, 90, 180, or 270
+  preview: false      # Show preview window during recording
+
+# Video Themes
+themes:
+  available:
+    - Male
+    - Female
+    - Child
+  file_format:
+    video_suffix: ScareV.mp4   # Video file naming: [Theme]ScareV.mp4
+    image_suffix: Start.png     # Image file naming: [Theme]Start.png
+
+# Display Settings
+display:
+  device: /dev/fb0    # Framebuffer device
+  terminal: 1         # Terminal number for fbi
+
+# Motion Detection Settings
+motion:
+  poll_interval: 0.1  # Seconds between sensor checks
+
+# Logging Settings
+logging:
+  enabled: true
+  level: INFO         # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: /home/pi/Projects/Halloween/halloweenframe.log
+  console_output: true

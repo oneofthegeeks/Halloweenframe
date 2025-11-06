@@ -1,0 +1,13 @@
+# Halloweenframe Python Dependencies
+# Install with: pip3 install -r requirements.txt
+
+# YAML configuration file support
+PyYAML>=6.0
+
+# Raspberry Pi GPIO control
+# Note: RPi.GPIO only works on Raspberry Pi hardware
+# On development machines, the code will use a mock GPIO implementation
+RPi.GPIO>=0.7.1
+
+# Type hints support for older Python versions (optional)
+typing-extensions>=4.0.0; python_version < '3.8'
