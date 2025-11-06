@@ -1,5 +1,7 @@
 # Halloweenframe
 
+[![GitHub](https://img.shields.io/badge/GitHub-oneofthegeeks%2FHalloweenframe-blue?logo=github)](https://github.com/oneofthegeeks/Halloweenframe)
+
 A Raspberry Pi-based motion-activated Halloween scare system that detects trick-or-treaters and triggers scary videos while recording their reactions.
 
 ## Overview
